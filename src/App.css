@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+/* global styling */
+.content-wrap{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 300px;
+    height: auto;
+    margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*nav bar styling*/
+.login-container{
+    background-color: #A93F60;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/*home page*/
+
+.home{
+    display: grid;
+    margin: 20px auto;
+    text-align: center;
+    
+}
+.puff-in-center {
+	-webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+.exercise-details{
+    text-align: start;
+    background: #D0D4DD;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    z-index: -1;
+
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2)
+}
+.exercise-details h4{
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+.exercise-details p{
+    margin: 0;
+    font-size: .9em;
+    color: #555;
+}
+@media screen and (max-width: 760px){
+    .home{
+        grid-template-columns: 1fr;
+    }
   }
+/*exercises page*/
+
+.exercise-page-wrapper{
+
+    margin: 20px 20px;
+   
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.exercise{
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    background: #D0D4DD;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    z-index: 0;
+    border-radius: 10px;
+    position: relative;
+
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2)
 }
 
-.App-link {
-  color: #61dafb;
+.exercise button{
+    color: #A93F60;
+    background-color: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.2em;
+
+}
+.exercise a{
+    text-decoration: none;
+    color: black;
+}
+.exercise-page-wrapper input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0; 
+    border: 0;
+}
+.exercise-page input:focus{
+    outline: 2px solid #A93F60;
+    border: none;
+}
+@media screen and (max-width: 760px){
+    .exercises{
+        grid-template-columns: 1fr;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.create label, input{
+    display: block;
+    text-align: start;
+    justify-content: start;
+    
+}
+
+.create input{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+.create button{
+    background-color: var(--primary);
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #A93F60;
+}
+
+.error{
+    padding: 10px;
+    background-color: #ffefef;
+    border: 1px solid var(--error);
+    color: var(--error);
+    border-radius: 4px;
+    margin: 20px 0;
+}
+.input.error{
+    border: 1px solid var(--error);
+
+}
+
+/*Exercise Description page*/
+.tab{
+    color: #A93F60;
+}
+.exercise-detail-page{
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.exercise-detail-page h1{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.exercise-stats{
+    width: 100%;
+    justify-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.exercise-stats h3{
+    margin-bottom: 20px;
+}
+.exercise-detail-page a{
+    text-decoration: none;
+}
+
+.routine-page{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+.routine-page h3{
+    margin-bottom: 20px;
+}
+.routine-page-blocks{
+    margin: 10px 20px;
+    padding-bottom:40px;
+
+}
+.routine-page-blocks input{
+    width: 85%;
+    margin: 20px 10px;
+}
+.exercise-to-add{
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    background: #D0D4DD;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    z-index: 0;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2)
+}
+.added-exercises-container{
+    width: 90%;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.navigate{
+    justify-content: center;
+    font-size: 1.5rem;
+    top:50%;
+    left: 50%;
+    padding-top: 50%;
 }
