@@ -12,7 +12,7 @@ const RoutineListDetail = ({routine}) => {
     if(!user){
       return
     }
-    const response = await fetch('/api/routines/'+routine._id, {
+    const response = await fetch('https://got-gains.herokuapp.com/api/routines/'+routine._id, {
       method: 'DELETE',
       headers: {
         'Authorization' : `Bearer ${user.token}`

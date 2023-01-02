@@ -11,7 +11,7 @@ const ExerciseListDetail = ({exercise}) => {
     if(!user){
       return
     }
-    const response = await fetch('/api/exercises/' + exercise._id, {
+    const response = await fetch('https://got-gains.herokuapp.com/api/exercises/' + exercise._id, {
         method: 'DELETE',
         headers: {
           'Authorization' : `Bearer ${user.token}`
