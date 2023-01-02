@@ -12,7 +12,7 @@ Functions of the applciations include:
 + Creating routines from the created exercises
 + Creation of personal database that will include the user's exercises and routines
 
-##Login/Register screens:
+## Login/Register screens:
 ![image](https://user-images.githubusercontent.com/48227740/210283150-199f83c3-7d10-430e-a0ae-7028bbd3d8a4.png)
 
 ## Home Page
